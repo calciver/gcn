@@ -100,7 +100,8 @@ for epoch in range(FLAGS.epochs):
         break
 
 print("Optimization Finished!")
-
+print("\n\n")
+print(features)
 # Testing
 test_cost, test_acc, test_duration = evaluate(features, support, y_test, test_mask, placeholders)
 print("Test set results:", "cost=", "{:.5f}".format(test_cost),
