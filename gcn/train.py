@@ -115,6 +115,6 @@ print("\n\n")
 print(features)
 
 plt.figure()
-for entry in features:
+for entry in features[0]:
   #print(entry)
   plt.scatter(entry[0],entry[1])
