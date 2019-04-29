@@ -3,6 +3,8 @@ from __future__ import print_function
 
 import time
 import tensorflow as tf
+import matplotlib.pyplot as plt
+
 
 from utils import *
 from models import GCN, MLP
@@ -100,9 +102,19 @@ for epoch in range(FLAGS.epochs):
         break
 
 print("Optimization Finished!")
-print("\n\n")
-print(features)
+
+
 # Testing
 test_cost, test_acc, test_duration = evaluate(features, support, y_test, test_mask, placeholders)
 print("Test set results:", "cost=", "{:.5f}".format(test_cost),
       "accuracy=", "{:.5f}".format(test_acc), "time=", "{:.5f}".format(test_duration))
+
+
+#Attempt to plot the files here
+print("\n\n")
+print(features)
+
+plt.figure()
+for entry in features:
+  #print(entry)
+  plt.scatter(entry[0],entry[1])
