@@ -114,7 +114,13 @@ print("Test set results:", "cost=", "{:.5f}".format(test_cost),
 print("\n\n")
 print(features)
 
+np.savetxt('features[0].txt', features[0])
+np.savetxt('features[1].txt', features[1])
+np.savetxt('features[2].txt', features[2])
+
+'''
 plt.figure()
 for entry in features[0]:
   #print(entry)
   plt.scatter(entry[0],entry[1])
+'''
